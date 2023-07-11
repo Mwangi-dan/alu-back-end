@@ -29,10 +29,10 @@ if __name__ == "__main__":
     Data preparation
     """
     user_tasks = []
-    for item in tasks:
+    for item in todos:
         task = {}
-        task['task'] = tasks.get('title')
-        task['completed'] = tasks.get('completed')
+        task['task'] = item.get('title')
+        task['completed'] = item.get('completed')
         task['username'] = username
         user_tasks.append(task)
     """
