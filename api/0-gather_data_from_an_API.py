@@ -24,10 +24,9 @@ if __name__ == "__main__":
         tasks.update({i.get('title'): i.get('completed')})
     TOTAL_NUMBER_OF_TASKS = len(tasks)
     NUMBER_OF_DONE_TASKS = len([k for k, v in tasks.items() if v is True])
-    print("Employees {} is done with tasks({}/{})".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS
     ))
     for k, v in tasks.items():
         if v is True:
             print("\t {}".format(k))
-
