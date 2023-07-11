@@ -19,14 +19,14 @@ if __name__ == "__main__":
     )
     users = json.loads(request_users.text)
     EMPLOYEE_NAME = users['name']
-    username = users.get('user_name')
+    username = users.get('username')
     todos = json.loads(request_todos.text)
     tasks = {}
     for i in todos:
         tasks.update({i.get('title'): i.get('completed')})
     TOTAL_NUMBER_OF_TASKS = len(tasks)
     NUMBER_OF_DONE_TASKS = len([k for k, v in tasks.items() if v is True])
-    
+
     """
     Export to CSV
     """
